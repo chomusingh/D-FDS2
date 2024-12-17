@@ -1,0 +1,18 @@
+def quick_sort(arr):
+    # Base case: An array of length 0 or 1 is already sorted
+    if len(arr) <= 1:
+        return arr
+
+    # Choose the pivot (last element in this example)
+    pivot = arr[-1]
+    left = [x for x in arr[:-1] if x <= pivot]  # Elements less than or equal to pivot
+    right = [x for x in arr[:-1] if x > pivot]  # Elements greater than pivot
+
+    # Recursively sort left and right parts, then combine
+    return quick_sort(left) + [pivot] + quick_sort(right)
+
+# Example usage:
+arr = [10, 7, 8, 9, 1, 5]
+print("Original array:", arr)
+sorted_arr = quick_sort(arr)
+print("Sorted array using Quick Sort:", sorted_arr)

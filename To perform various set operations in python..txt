@@ -1,0 +1,33 @@
+# Program to perform various set operations in Python
+
+# Define two sets
+set_A = {1, 2, 3, 4, 5}
+set_B = {4, 5, 6, 7, 8}
+
+# Display the sets
+print("Set A:", set_A)
+print("Set B:", set_B)
+
+# Union of two sets
+union_set = set_A.union(set_B)
+print("\nUnion of A and B:", union_set)
+
+# Intersection of two sets
+intersection_set = set_A.intersection(set_B)
+print("Intersection of A and B:", intersection_set)
+
+# Difference of two sets
+difference_set = set_A.difference(set_B)
+print("Difference of A and B (A - B):", difference_set)
+
+# Symmetric difference of two sets
+symmetric_difference_set = set_A.symmetric_difference(set_B)
+print("Symmetric Difference of A and B:", symmetric_difference_set)
+
+# Check if a set is a subset
+is_subset = {1, 2}.issubset(set_A)
+print("\nIs {1, 2} a subset of A?", is_subset)
+
+# Check if a set is a superset
+is_superset = set_A.issuperset({1, 2})
+print("Is A a superset of {1, 2}?", is_superset)

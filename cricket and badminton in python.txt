@@ -1,0 +1,28 @@
+def main():
+    # Input the student data
+    cricket = set(input("Enter the names of students who play Cricket (comma-separated): ").split(","))
+    badminton = set(input("Enter the names of students who play Badminton (comma-separated): ").split(","))
+
+    # Players who play both Cricket and Badminton
+    both = cricket.intersection(badminton)
+    print("\nStudents who play both Cricket and Badminton:", both)
+
+    # Players who play either Cricket or Badminton but not both
+    either_but_not_both = cricket.symmetric_difference(badminton)
+    print("Students who play either Cricket or Badminton but not both:", either_but_not_both)
+
+    # Players who play only Cricket
+    only_cricket = cricket - badminton
+    print("Students who play only Cricket:", only_cricket)
+
+    # Players who play only Badminton
+    only_badminton = badminton - cricket
+    print("Students who play only Badminton:", only_badminton)
+
+    # Players who play neither Cricket nor Badminton
+    total_students = set(input("\nEnter the names of all students in the class (comma-separated): ").split(","))
+    neither = total_students - cricket.union(badminton)
+    print("Students who play neither Cricket nor Badminton:", neither)
+
+if __name__ == "__main__":
+    main()

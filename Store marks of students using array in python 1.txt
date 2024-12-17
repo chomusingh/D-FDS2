@@ -1,0 +1,15 @@
+# Program to store and display student marks using an array
+
+# Input: Number of students and their marks
+num_students = int(input("Enter the number of students: "))
+marks = []  # Initialize an empty list to store marks
+
+# Collect marks for each student
+for i in range(num_students):
+    mark = float(input(f"Enter marks for student {i + 1}: "))
+    marks.append(mark)
+
+# Display the marks
+print("\nStudent Marks:")
+for i in range(num_students):
+    print(f"Student {i + 1}: {marks[i]}")
